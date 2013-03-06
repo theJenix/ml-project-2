@@ -9,6 +9,7 @@ import shared.Instance;
 import shared.SumOfSquaresError;
 import shared.filt.LabelSplitFilter;
 import shared.reader.ArffDataSetReader;
+import shared.reader.DataSetLabelBinarySeperator;
 import shared.tester.AccuracyTestMetric;
 import shared.tester.ConfusionMatrixTestMetric;
 import shared.tester.NeuralNetworkTester;
@@ -24,35 +25,25 @@ public class RHCRunner {
     public static void main(String[] args) throws Exception {
         // 1) Construct data instances for training.  These will also be run
         //    through the network at the bottom to verify the output
-//        int[] labels = { 0, 1 };
-//        double[][][] data = {
-//               { { 1, 1, 1, 1 }, { labels[0] } },
-//               { { 1, 0, 1, 0 }, { labels[1] } },
-//               { { 0, 1, 0, 1 }, { labels[1] } },
-//               { { 0, 0, 0, 0 }, { labels[0] } }
-//        };
-//        Instance[] patterns = new Instance[data.length];
-//        for (int i = 0; i < patterns.length; i++) {
-//            patterns[i] = new Instance(data[i][0]);
-//            patterns[i].setLabel(new Instance(data[i][1]));
-//        }
-
         ArffDataSetReader reader = new ArffDataSetReader(args[0]);
         DataSet set = reader.read();
         LabelSplitFilter flt = new LabelSplitFilter();
         flt.filter(set);
+        DataSetLabelBinarySeperator.seperateLabels(set);
         DataSetDescription desc = set.getDescription();
         DataSetDescription labelDesc = desc.getLabelDescription();
         
+        //TODO: this needs Alex's binary label separator
+
         // 2) Instantiate a network using the FeedForwardNeuralNetworkFactory.  This network
         //    will be our classifier.
         FeedForwardNeuralNetworkFactory factory = new FeedForwardNeuralNetworkFactory();
         // 2a) These numbers correspond to the number of nodes in each layer.
-        //     This network has 4 input nodes, 3 hidden nodes in 1 layer, and 1 output node in the output layer.
+        //     As a rule of thumb, use a hidden layer with n = 2/3 # input nodes + # output nodes
         FeedForwardNetwork network = factory.createClassificationNetwork(new int[] {
                 desc.getAttributeCount(),
-                2 * desc.getAttributeCount() / 3 + 1,
-                1 });
+                factory.getOptimalHiddenLayerNodes(desc, labelDesc),
+                labelDesc.getDiscreteRange() });
         
         // 3) Instantiate a measure, which is used to evaluate each possible set of weights.
         ErrorMeasure measure = new SumOfSquaresError();
@@ -82,14 +73,14 @@ public class RHCRunner {
         
         //10) Run the training data through the network with the weights discovered through optimization, and
         //    print out the expected label and result of the classifier for each instance.
-//        TestMetric acc = new AccuracyTestMetric();
+        TestMetric acc = new AccuracyTestMetric();
 //        TestMetric cm  = new ConfusionMatrixTestMetric(labels);
         TestMetric raw = new RawOutputTestMetric();
-        Tester t = new NeuralNetworkTester(network, raw);
+        Tester t = new NeuralNetworkTester(network, raw, acc);
         t.test(set.getInstances());
         
         raw.printResults();
-//        acc.printResults();
+        acc.printResults();
 //        cm.printResults();
     }
 }
