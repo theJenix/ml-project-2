@@ -19,7 +19,7 @@ import func.nn.feedfwd.FeedForwardNetwork;
 import func.nn.feedfwd.FeedForwardNeuralNetworkFactory;
 
 
-public class RHCImageSegmentation {
+public class RHCRunner {
 
     public static void main(String[] args) throws Exception {
         // 1) Construct data instances for training.  These will also be run
