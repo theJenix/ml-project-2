@@ -1,3 +1,5 @@
+import java.io.File;
+
 import opt.OptimizationAlgorithm;
 import opt.RandomizedHillClimbing;
 import opt.example.NeuralNetworkOptimizationProblem;
@@ -30,9 +32,18 @@ public class RHCRunner extends ABaseNeuralNetworkRunner {
             iterArray[ii] = Integer.valueOf(parts[ii]);
         }
         
-        MultiRunner mrunner = new MultiRunner(new RHCRunner(args[0]), iterArray, new int[] { 100 });
-//        mrunner.setWriter()
-        
+        String splitList = args[2];
+        parts = splitList.split(",");
+        int[] pctTrainArray = new int[parts.length];
+        for (int ii = 0; ii < parts.length; ii++) {
+            pctTrainArray[ii] = Integer.valueOf(parts[ii]);
+        }
+
+        MultiRunner mrunner = new MultiRunner(new RHCRunner(args[0]), iterArray, pctTrainArray);
+        if (args.length >= 4) {
+            mrunner.setOutputFolder(new File(args[3]));
+        }
+        mrunner.runAll();
     }
 
     public RHCRunner(String dataFilePath) {

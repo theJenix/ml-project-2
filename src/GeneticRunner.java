@@ -1,3 +1,5 @@
+import java.io.File;
+
 import opt.OptimizationAlgorithm;
 import opt.RandomizedHillClimbing;
 import opt.example.NeuralNetworkOptimizationProblem;
@@ -31,7 +33,18 @@ public class GeneticRunner extends ABaseNeuralNetworkRunner {
             iterArray[ii] = Integer.valueOf(parts[ii]);
         }
         
-        MultiRunner mrunner = new MultiRunner(new GeneticRunner(args[0]), iterArray, new int[] { 100 });
+        String splitList = args[2];
+        parts = splitList.split(",");
+        int[] pctTrainArray = new int[parts.length];
+        for (int ii = 0; ii < parts.length; ii++) {
+            pctTrainArray[ii] = Integer.valueOf(parts[ii]);
+        }
+
+        MultiRunner mrunner = new MultiRunner(new GeneticRunner(args[0]), iterArray, pctTrainArray);
+        if (args.length >= 4) {
+            mrunner.setOutputFolder(new File(args[3]));
+        }
+        mrunner.runAll();
     }
 
     public GeneticRunner(String dataFilePath) {
@@ -41,7 +54,7 @@ public class GeneticRunner extends ABaseNeuralNetworkRunner {
     @Override
     protected OptimizationAlgorithm newAlgorithmInstance(
             NeuralNetworkOptimizationProblem nno) {
-        // Genetic Algorithm is used with a population of 10 and mating/mutating 2 per generation.
-        return new StandardGeneticAlgorithm(10, 2, 2, nno);
+        // Genetic Algorithm is used with a population of 60 and mating/mutating 2 per generation.
+        return new StandardGeneticAlgorithm(60, 2, 2, nno);
     }
 }
