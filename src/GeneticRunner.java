@@ -1,6 +1,7 @@
 import opt.OptimizationAlgorithm;
 import opt.RandomizedHillClimbing;
 import opt.example.NeuralNetworkOptimizationProblem;
+import opt.ga.StandardGeneticAlgorithm;
 import shared.DataSet;
 import shared.DataSetDescription;
 import shared.ErrorMeasure;
@@ -20,7 +21,7 @@ import shared.tester.Tester;
 import func.nn.feedfwd.FeedForwardNetwork;
 import func.nn.feedfwd.FeedForwardNeuralNetworkFactory;
 
-public class RHCRunner extends ABaseNeuralNetworkRunner {
+public class GeneticRunner extends ABaseNeuralNetworkRunner {
 
     public static void main(String[] args) throws Exception {
         String iterationsList = args[1];
@@ -30,18 +31,17 @@ public class RHCRunner extends ABaseNeuralNetworkRunner {
             iterArray[ii] = Integer.valueOf(parts[ii]);
         }
         
-        MultiRunner mrunner = new MultiRunner(new RHCRunner(args[0]), iterArray, new int[] { 100 });
-//        mrunner.setWriter()
-        
+        MultiRunner mrunner = new MultiRunner(new GeneticRunner(args[0]), iterArray, new int[] { 100 });
     }
 
-    public RHCRunner(String dataFilePath) {
+    public GeneticRunner(String dataFilePath) {
         super(dataFilePath);
     }
 
     @Override
     protected OptimizationAlgorithm newAlgorithmInstance(
             NeuralNetworkOptimizationProblem nno) {
-        return new RandomizedHillClimbing(nno);
+        // Genetic Algorithm is used with a population of 10 and mating/mutating 2 per generation.
+        return new StandardGeneticAlgorithm(10, 2, 2, nno);
     }
 }
