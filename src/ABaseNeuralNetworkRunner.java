@@ -105,7 +105,7 @@ public abstract class ABaseNeuralNetworkRunner implements Runner {
 
         // 8) Run the trainer.  This may take a little while to run, depending on the OptimizationAlgorithm,
         //    size of the data, and number of iterations.
-        fit.train();
+        System.out.println(fit.train());
         
         trainTime = System.currentTimeMillis() - trainTime;
 

@@ -1,0 +1,360 @@
+Correctly Classified Instances: 0.00%
+Incorrectly Classified Instances: 100.00%
+Training time: 00:12
+Testing time: 00:00
+Number of iterations: 5000
+25% training / 75% testing
+Confusion Matrix:
+
+	0	1	?
+0	0	0	199
+1	0	0	128
+
+Correctly Classified Instances: 0.00%
+Incorrectly Classified Instances: 100.00%
+Training time: 00:23
+Testing time: 00:00
+Number of iterations: 5000
+50% training / 50% testing
+Confusion Matrix:
+
+	0	1	?
+0	0	0	130
+1	0	0	88
+
+Correctly Classified Instances: 0.00%
+Incorrectly Classified Instances: 100.00%
+Training time: 00:31
+Testing time: 00:00
+Number of iterations: 5000
+70% training / 30% testing
+Confusion Matrix:
+
+	0	1	?
+0	0	0	79
+1	0	0	52
+
+Correctly Classified Instances: 0.00%
+Incorrectly Classified Instances: 100.00%
+Training time: 00:41
+Testing time: 00:00
+Number of iterations: 5000
+90% training / 10% testing
+Confusion Matrix:
+
+	0	1	?
+0	0	0	24
+1	0	0	20
+
+Correctly Classified Instances: 0.00%
+Incorrectly Classified Instances: 100.00%
+Training time: 00:04
+Testing time: 00:00
+Number of iterations: 5000
+Testing using training set.
+Confusion Matrix:
+
+	0	1	?
+0	0	0	267
+1	0	0	168
+
+Correctly Classified Instances: 0.00%
+Incorrectly Classified Instances: 100.00%
+Training time: 00:02
+Testing time: 00:00
+Number of iterations: 10000
+25% training / 75% testing
+Confusion Matrix:
+
+	0	1	?
+0	0	0	199
+1	0	0	128
+
+Correctly Classified Instances: 0.00%
+Incorrectly Classified Instances: 100.00%
+Training time: 00:42
+Testing time: 00:00
+Number of iterations: 10000
+50% training / 50% testing
+Confusion Matrix:
+
+	0	1	?
+0	0	0	130
+1	0	0	88
+
+Correctly Classified Instances: 0.00%
+Incorrectly Classified Instances: 100.00%
+Training time: 01:03
+Testing time: 00:00
+Number of iterations: 10000
+70% training / 30% testing
+Confusion Matrix:
+
+	0	1	?
+0	0	0	79
+1	0	0	52
+
+Correctly Classified Instances: 0.00%
+Incorrectly Classified Instances: 100.00%
+Training time: 01:20
+Testing time: 00:00
+Number of iterations: 10000
+90% training / 10% testing
+Confusion Matrix:
+
+	0	1	?
+0	0	0	24
+1	0	0	20
+
+Correctly Classified Instances: 0.69%
+Incorrectly Classified Instances: 99.31%
+Training time: 01:29
+Testing time: 00:00
+Number of iterations: 10000
+Testing using training set.
+Confusion Matrix:
+
+	0	1	?
+0	3	0	264
+1	0	0	168
+
+Correctly Classified Instances: 85.63%
+Incorrectly Classified Instances: 14.37%
+Training time: 00:56
+Testing time: 00:00
+Number of iterations: 25000
+25% training / 75% testing
+Confusion Matrix:
+
+	0	1	?
+0	187	6	6
+1	24	93	11
+
+Correctly Classified Instances: 79.36%
+Incorrectly Classified Instances: 20.64%
+Training time: 01:53
+Testing time: 00:00
+Number of iterations: 25000
+50% training / 50% testing
+Confusion Matrix:
+
+	0	1	?
+0	115	1	14
+1	2	58	28
+
+Correctly Classified Instances: 66.41%
+Incorrectly Classified Instances: 33.59%
+Training time: 01:33
+Testing time: 00:00
+Number of iterations: 25000
+70% training / 30% testing
+Confusion Matrix:
+
+	0	1	?
+0	57	0	22
+1	1	30	21
+
+Correctly Classified Instances: 61.36%
+Incorrectly Classified Instances: 38.64%
+Training time: 03:23
+Testing time: 00:00
+Number of iterations: 25000
+90% training / 10% testing
+Confusion Matrix:
+
+	0	1	?
+0	19	0	5
+1	0	8	12
+
+Correctly Classified Instances: 44.83%
+Incorrectly Classified Instances: 55.17%
+Training time: 03:44
+Testing time: 00:00
+Number of iterations: 25000
+Testing using training set.
+Confusion Matrix:
+
+	0	1	?
+0	166	0	101
+1	0	29	139
+
+Correctly Classified Instances: 89.60%
+Incorrectly Classified Instances: 10.40%
+Training time: 00:51
+Testing time: 00:00
+Number of iterations: 50000
+25% training / 75% testing
+Confusion Matrix:
+
+	0	1	?
+0	191	6	2
+1	24	102	2
+
+Correctly Classified Instances: 89.45%
+Incorrectly Classified Instances: 10.55%
+Training time: 03:48
+Testing time: 00:00
+Number of iterations: 50000
+50% training / 50% testing
+Confusion Matrix:
+
+	0	1	?
+0	124	4	2
+1	5	71	12
+
+Correctly Classified Instances: 90.84%
+Incorrectly Classified Instances: 9.16%
+Training time: 04:25
+Testing time: 00:00
+Number of iterations: 50000
+70% training / 30% testing
+Confusion Matrix:
+
+	0	1	?
+0	73	5	1
+1	2	46	4
+
+Correctly Classified Instances: 88.64%
+Incorrectly Classified Instances: 11.36%
+Training time: 06:35
+Testing time: 00:00
+Number of iterations: 50000
+90% training / 10% testing
+Confusion Matrix:
+
+	0	1	?
+0	21	1	2
+1	1	18	1
+
+Correctly Classified Instances: 68.05%
+Incorrectly Classified Instances: 31.95%
+Training time: 06:27
+Testing time: 00:00
+Number of iterations: 50000
+Testing using training set.
+Confusion Matrix:
+
+	0	1	?
+0	217	0	50
+1	0	79	89
+
+Correctly Classified Instances: 90.52%
+Incorrectly Classified Instances: 9.48%
+Training time: 03:41
+Testing time: 00:00
+Number of iterations: 100000
+25% training / 75% testing
+Confusion Matrix:
+
+	0	1	?
+0	189	7	3
+1	20	107	1
+
+Correctly Classified Instances: 89.45%
+Incorrectly Classified Instances: 10.55%
+Training time: 05:36
+Testing time: 00:00
+Number of iterations: 100000
+50% training / 50% testing
+Confusion Matrix:
+
+	0	1	?
+0	123	6	1
+1	5	72	11
+
+Correctly Classified Instances: 87.79%
+Incorrectly Classified Instances: 12.21%
+Training time: 08:21
+Testing time: 00:00
+Number of iterations: 100000
+70% training / 30% testing
+Confusion Matrix:
+
+	0	1	?
+0	73	4	2
+1	2	42	8
+
+Correctly Classified Instances: 90.91%
+Incorrectly Classified Instances: 9.09%
+Training time: 11:59
+Testing time: 00:00
+Number of iterations: 100000
+90% training / 10% testing
+Confusion Matrix:
+
+	0	1	?
+0	21	1	2
+1	1	19	0
+
+Correctly Classified Instances: 100.00%
+Incorrectly Classified Instances: 0.00%
+Training time: 11:46
+Testing time: 00:00
+Number of iterations: 100000
+Testing using training set.
+Confusion Matrix:
+
+	0	1	?
+0	267	0	0
+1	0	168	0
+
+Correctly Classified Instances: 89.91%
+Incorrectly Classified Instances: 10.09%
+Training time: 08:12
+Testing time: 00:00
+Number of iterations: 250000
+25% training / 75% testing
+Confusion Matrix:
+
+	0	1	?
+0	186	12	1
+1	20	108	0
+
+Correctly Classified Instances: 88.53%
+Incorrectly Classified Instances: 11.47%
+Training time: 16:50
+Testing time: 00:00
+Number of iterations: 250000
+50% training / 50% testing
+Confusion Matrix:
+
+	0	1	?
+0	125	4	1
+1	5	68	15
+
+Correctly Classified Instances: 87.79%
+Incorrectly Classified Instances: 12.21%
+Training time: 20:15
+Testing time: 00:00
+Number of iterations: 250000
+70% training / 30% testing
+Confusion Matrix:
+
+	0	1	?
+0	72	3	4
+1	2	43	7
+
+Correctly Classified Instances: 88.64%
+Incorrectly Classified Instances: 11.36%
+Training time: 28:53
+Testing time: 00:00
+Number of iterations: 250000
+90% training / 10% testing
+Confusion Matrix:
+
+	0	1	?
+0	23	1	0
+1	1	16	3
+
+Correctly Classified Instances: 100.00%
+Incorrectly Classified Instances: 0.00%
+Training time: 32:19
+Testing time: 00:00
+Number of iterations: 250000
+Testing using training set.
+Confusion Matrix:
+
+	0	1	?
+0	267	0	0
+1	0	168	0
+
